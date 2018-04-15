@@ -57,7 +57,7 @@ function sumAndMultiply(a, b, c) {
 }
 
 //sumAndMultiply();
-testSumAndMultiply();
+sumAndMultiply();
 
 //console.log(testSumAndMultiply(4,7,5));
 
@@ -132,10 +132,11 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  var lastArray = multiply(multiply(dynamicArray[0],dynamicArray[1])[0], multiply(multiply(dynamicArray[2],dynamicArray[3])[0], dynamicArray[4][0]));
+  return [lastArray, 'The numbers' + dynamicArray.join(','), ' have a product of ' + lastArray + '.' ];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
